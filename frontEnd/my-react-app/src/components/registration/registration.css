@@ -1,0 +1,41 @@
+/* Add these styles to your CSS file */
+.custom-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .custom-checkbox + .form-check-label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+  }
+  
+  .custom-checkbox + .form-check-label::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffa900;
+    border-radius: 4px;
+    background-color: transparent;
+    transform: translateY(-50%);
+    transition: background-color 0.3s;
+  }
+  
+  .custom-checkbox:checked + .form-check-label::before {
+    background-color: #ffa900;
+  }
+  
+  .custom-checkbox:checked + .form-check-label::after {
+    content: "✔";
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    font-size: 14px;
+    color: #fff;
+    transform: translateY(-50%);
+  }
+  

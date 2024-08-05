@@ -1,0 +1,80 @@
+{
+  "recipes": [
+    {
+      "id": "1",
+      "name": "Tea",
+      "ingredients": [
+        "coffie powder",
+        "milk",
+        "sugar",
+        "water"
+      ],
+      "instructions": "afdjahsbfljrflkhjehrwfiludfbviwkjrgkljhiwovmngu",
+      "cuisine": "hsfdgck",
+      "difficulty": "easy",
+      "image": "https://source.unsplash.com/random/900×700/?fruit",
+      "likes": 0,
+      "averageRating": 0,
+      "Rating": [],
+      "comments": [],
+      "__v": 0
+    },
+    {
+      "id": "2",
+      "name": "coffie",
+      "ingredients": [
+        "coffie powder",
+        "milk",
+        "sugar",
+        "water"
+      ],
+      "instructions": "afdjahsbfljrflkhjehrwfiludfbviwkjrgkljhiwovmngu",
+      "cuisine": "hsfdgck",
+      "difficulty": "easy",
+      "image": "https://source.unsplash.com/random/900×700/?fruit",
+      "likes": 0,
+      "averageRating": 0,
+      "Rating": [],
+      "comments": [],
+      "__v": 0
+    },
+    {
+      "id": "3",
+      "name": "asbjhaksh",
+      "ingredients": [
+        "coffie powder",
+        "milk",
+        "sugar",
+        "water"
+      ],
+      "instructions": "afdjahsbfljrflkhjehrwfiludfbviwkjrgkljhiwovmngu",
+      "cuisine": "hsfdgck",
+      "difficulty": "easy",
+      "image": "https://source.unsplash.com/random/300×300/?",
+      "likes": 0,
+      "averageRating": 0,
+      "Rating": [],
+      "comments": [],
+      "__v": 0
+    },
+    {
+      "id": "4",
+      "name": "chicken",
+      "ingredients": [
+        "coffie powder",
+        "milk",
+        "sugar",
+        "water"
+      ],
+      "instructions": "afdjahsbfljrflkhjehrwfiludfbviwkjrgkljhiwovmngu",
+      "cuisine": "hsfdgck",
+      "difficulty": "easy",
+      "image": "https://source.unsplash.com/random/300×300/?fruit",
+      "likes": 0,
+      "averageRating": 0,
+      "Rating": [],
+      "comments": [],
+      "__v": 0
+    }
+  ]
+}

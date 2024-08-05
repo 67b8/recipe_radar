@@ -1,0 +1,32 @@
+.unauthorized-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color:orange; /* Tomato color */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+  }
+  
+  .unauthorized-message .emoji {
+    width: 200px; /* Adjust the width as needed */
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .unauthorized-message p {
+    margin: 10px 0;
+  }
+  
+  .unauthorized-message .login-link {
+    color: orange;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .unauthorized-message .login-link:hover {
+    color:orange; /* Darker tomato color */
+  }
+  

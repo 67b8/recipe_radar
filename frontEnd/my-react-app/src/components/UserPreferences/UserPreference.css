@@ -1,0 +1,190 @@
+.preferences-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 3rem;
+}
+
+.grid-item {
+  position: relative;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.grid-item.diet {
+  border-radius: 50%;
+}
+
+.grid-item.cuisine {
+  border-radius: 10px;
+}
+
+.grid-item.clicked .overlay {
+  background-color: rgba(0, 139, 139, 0.7);
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+}
+
+.recipe-image,
+.preference-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.grid-item.clicked .recipe-image,
+.grid-item.clicked .preference-image {
+  filter: brightness(50%);
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.recipe-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.preference-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(27, 26, 26);
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.selected-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.selected-item {
+  position: relative;
+  margin-right: 10px;
+}
+
+.selected-item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.selected-item-content .delete-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.selected-item-content .remove-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.selected-item-content:hover .delete-icon {
+  display: block;
+  bottom: 20%;
+}
+
+.selected-item-content:hover .remove-icon {
+  display: block;
+  bottom: 20%;
+}
+
+.selected-image {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  margin-right: 5px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.selected-item:hover .selected-image {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+button {
+  padding: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.image {
+  height: 132px;
+  width: 132px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.place {
+  position: relative;
+  display: inline-block;
+}
+
+.plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  cursor: pointer;
+}
+
+.text1 {
+  margin-top: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}

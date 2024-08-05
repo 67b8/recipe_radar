@@ -1,0 +1,11 @@
+/* RateRecipe.css */
+.rate-recipe {
+  text-align: center;
+}
+
+.rate-recipe .far,
+.rate-recipe .fas {
+  font-size: 2rem;
+  color: orange;
+  margin: 0 0.1rem;
+}
