@@ -35,7 +35,7 @@ function UserPreferences() {
     // Fetch initial preferences from the backend
     const user = JSON.parse(localStorage.getItem('user'));
     const userId = user._id; 
-    axios.get(`http://localhost:3001/api/preferences/${userId}`)
+    axios.get(`https://recipeserver-67b8s-projects.vercel.app/api/preferences/${userId}`)
       .then(response => {
         console.log("Fetched user preferences:", response.data); // Log the response to see its structure
 
@@ -102,7 +102,7 @@ function UserPreferences() {
     if (token) {
       const user = JSON.parse(localStorage.getItem('user'));
       const userId = user._id; 
-      axios.patch(`http://localhost:3001/api/preferences/${userId}`, {
+      axios.patch(`https://recipeserver-67b8s-projects.vercel.app/api/preferences/${userId}`, {
         preferences: {
           dietraryRestrictions: updatedDiets.map(selected => selected.name),
           favouriteCuisines: updatedCuisines.map(selected => selected.name)
