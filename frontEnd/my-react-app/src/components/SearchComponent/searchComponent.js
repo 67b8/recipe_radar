@@ -9,7 +9,7 @@ export default function SearchResults() {
   useEffect(() => {
     const fetchSearchResults = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/api/recipes/search/${criteria}/${term}`);
+        const response = await fetch(`https://recipeserver-67b8s-projects.vercel.app/api/recipes/search/${criteria}/${term}`);
 
         const data = await response.json();
         setRecipes(data);
