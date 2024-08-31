@@ -21,7 +21,7 @@ export default function Admindashboard() {
     const fetchRecipes = async () => {
       try {
         const recipePromises = cuisines.map(cuisine=>
-          axios.get(`http://localhost:3001/api/recipes/search/cuisine/${cuisine}`)
+          axios.get(`https://recipeserver-67b8s-projects.vercel.app/api/recipes/search/cuisine/${cuisine}`)
         );
         const recipeResponses = await Promise.all(recipePromises);
         const fetchedRecipes = recipeResponses.flatMap(response => response.data);
@@ -35,7 +35,7 @@ export default function Admindashboard() {
   };
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/recipes')
+    fetch('https://recipeserver-67b8s-projects.vercel.app/api/recipes')
       .then(response => response.json())
       .then(data => setAllRecipes(data))
       .catch(error => console.error('Error fetching recipes:', error));
