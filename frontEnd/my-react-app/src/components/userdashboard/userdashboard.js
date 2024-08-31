@@ -10,7 +10,7 @@ export default function Userdashboard() {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/recipes')
+    fetch('https://recipeserver-67b8s-projects.vercel.app/api/recipes')
       .then(response => response.json())
       .then(data => setRecipes(data))
       .catch(error => console.error('Error fetching recipes:', error));
