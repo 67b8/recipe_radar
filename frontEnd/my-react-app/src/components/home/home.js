@@ -8,9 +8,9 @@ import RecipeCard from '../RecipeCard/RecipeCard';
 
 export default function Home() {
   const [recipes, setRecipes] = useState([]);
-
+  
   useEffect(() => {
-    fetch('http://localhost:3001/api/recipes')
+    fetch('https://recipeserver-67b8s-projects.vercel.app/api/recipes')
       .then(response => response.json())
       .then((data) => {
         setRecipes(data)
