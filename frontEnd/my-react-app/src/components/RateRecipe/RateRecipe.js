@@ -7,7 +7,7 @@ function RateRecipe({ recipeId, userId }) {
   const [ratingSubmitted, setRatingSubmitted] = useState(false);
 
   const handleSubmit = () => {
-    axios.post(`http://localhost:3001/api/recipes/${recipeId}/rate`, {
+    axios.post(`https://recipeserver-67b8s-projects.vercel.app/api/recipes/${recipeId}/rate`, {
       rate: rating,
       recipeId: recipeId,
     })
