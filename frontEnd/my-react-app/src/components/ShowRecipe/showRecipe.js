@@ -15,7 +15,7 @@ function ShowRecipe() {
   const [userDetailsMap, setUserDetailsMap] = useState({});
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/api/recipes/search/id/${id}`)
+    axios.get(`https://recipeserver-67b8s-projects.vercel.app/api/recipes/search/id/${id}`)
       .then(response => {
         setRecipe(response.data);
         setAverageRating(response.data.averageRating)
@@ -43,13 +43,13 @@ function ShowRecipe() {
     event.preventDefault();
     const token = localStorage.getItem('token');
     if (token) {
-      axios.post(`http://localhost:3001/api/recipes/${id}/addcomment`, {
+      axios.post(`https://recipeserver-67b8s-projects.vercel.app/api/recipes/${id}/addcomment`, {
         userId: JSON.parse(localStorage.getItem('user'))._id,
         comment: comment,
       })
         .then(() => {
           setComment('');
-          axios.get(`http://localhost:3001/api/recipes/search/id/${id}`)
+          axios.get(`https://recipeserver-67b8s-projects.vercel.app/api/recipes/search/id/${id}`)
             .then(response => setRecipe(response.data));
         })
         .catch(error => console.error('Error adding comment:', error));
@@ -63,7 +63,7 @@ function ShowRecipe() {
     if (token) {
       const user = JSON.parse(localStorage.getItem('user'));
       const userId = user._id;
-      axios.post(`http://localhost:3001/api/recipes/${userId}/like`, {
+      axios.post(`https://recipeserver-67b8s-projects.vercel.app/api/recipes/${userId}/like`, {
         recipeId: id,
       })
         .then(response => {
@@ -90,7 +90,7 @@ function ShowRecipe() {
     if (token) {
       const user = JSON.parse(localStorage.getItem('user'));
       const userId = user._id;
-      axios.post(`http://localhost:3001/api/recipes/${userId}/favorite`, {
+      axios.post(`https://recipeserver-67b8s-projects.vercel.app/api/recipes/${userId}/favorite`, {
         recipeId: id,
       })
         .then(response => {
@@ -116,7 +116,7 @@ function ShowRecipe() {
     if (recipe && recipe.comments) {
       recipe.comments.forEach(comment => {
         if (comment && comment.user && !userDetailsMap[comment.user]) {
-          axios.get(`http://localhost:3001/api/user/getdetails/${comment.user}`)
+          axios.get(`https://recipeserver-67b8s-projects.vercel.app/api/user/getdetails/${comment.user}`)
             .then(response => {
               setUserDetailsMap(prevMap => ({
                 ...prevMap,
