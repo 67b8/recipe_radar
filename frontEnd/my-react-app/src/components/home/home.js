@@ -10,7 +10,7 @@ export default function Home() {
   const [recipes, setRecipes] = useState([]);
   
   useEffect(() => {
-    fetch('https://recipeserver-39nugo9jd-67b8s-projects.vercel.app/api/recipes')
+    fetch('https://recipeserver-git-main-67b8s-projects.vercel.app/api/recipes')
       .then(response => response.json())
       .then((data) => {
         setRecipes(data)
