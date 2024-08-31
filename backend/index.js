@@ -17,9 +17,10 @@ app.listen(port)
 
 
 
+const uri = "mongodb+srv://pasulashivachetanreddy:u3EEPcmciHDoofiK@cluster0.mxozr.mongodb.net/jpmc?retryWrites=true&w=majority&appName=Cluster0";
 //establishing mongodb connection
 const mongoose =require('mongoose');
-mongoose.connect("mongodb://127.0.0.1:27017/Recipejp").then(()=>{
+mongoose.connect(uri).then(()=>{
     console.log("connection successful")
 }).catch(()=>{
     console.log("connection unsuccessful")
