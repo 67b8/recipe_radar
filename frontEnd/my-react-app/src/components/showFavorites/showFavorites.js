@@ -19,7 +19,7 @@ export default function ShowFavorites() {
     const fetchRecipes = async () => {
       try {
         const recipePromises = favoriteRecipeIds.map(id =>
-          axios.get(`http://localhost:3001/api/recipes/search/id/${id}`)
+          axios.get(`https://recipeserver-67b8s-projects.vercel.app/api/recipes/search/id/${id}`)
         );
         const recipeResponses = await Promise.all(recipePromises);
         const fetchedRecipes = recipeResponses.map(response => response.data);
