@@ -6,7 +6,13 @@ const recipeRoutes=require('./routes/routes.recipe');
 
 
 const cors = require('cors')
-app.use(cors())
+app.use(cors(
+    { 
+       origin : "https://client-ashy-iota.vercel.app",
+        methods: ["POST","GET"],
+        credentials:true
+    }
+))
 app.use(recipeRoutes)
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*'); // Allow requests from any origin
