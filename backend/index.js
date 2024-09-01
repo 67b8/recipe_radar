@@ -7,11 +7,11 @@ const recipeRoutes=require('./routes/routes.recipe');
 
 const cors = require('cors')
 app.use(cors(
-    { 
-       origin : "https://client-git-main-67b8s-projects.vercel.app",
-        methods: ["POST","GET"],
-        credentials:true
-    }
+    // { 
+    //    origin : "https://client-git-main-67b8s-projects.vercel.app",
+    //     methods: ["POST","GET"],
+    //     credentials:true
+    // }
 ))
 app.use(recipeRoutes)
 app.use((req, res, next) => {
