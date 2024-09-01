@@ -14,7 +14,6 @@ export default function Home() {
       .then(response => response.json())
       .then((data) => {
         setRecipes(data)
-        console.log(data);
       })
       .catch(error => console.error('Error fetching recipes:', error));
   }, []);
