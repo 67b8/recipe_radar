@@ -12,7 +12,7 @@ const AuthProvider = ({ children }) => {
 
     const loginAction = async (data) => {
         try {
-            const response = await axios.post("http://localhost:3001/api/auth/login", { ...data });
+            const response = await axios.post("https://recipeserver-git-main-67b8s-projects.vercel.app/api/auth/login", { ...data });
             console.log('Response data:', response.data);
     
             const { token, user } = response.data;
