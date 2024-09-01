@@ -33,22 +33,20 @@ export default function ShowLiked() {
   }, [LikedRecipeIds]);
 
   return (
-    <div className="container mt-4 userdashboard" id="userdashboard">
+
      
-      <div className="favorites-container">
-        <div className="favorites-heading">
-          <h2 className="text-center mb-4">YOU LIKED</h2>
-        </div>
-        <div className="d-flex flex-wrap justify-content-around">
+      <div className="favorites-container mt-4">
+        <div className="favorites-heading">YOU LIKED</div>
+        <div className="recipe-grid">
           {recipes.map((recipe, index) => (
             <Link key={index} className="nav-link" to={`/recipe/${recipe._id}`}>
-              <div className="grid-item mb-3" style={{ width: "236px", height: "375px" ,borderRadius:'0'}}>
+              <div className="grid" >
               <RecipeCard recipename={recipe.name} description={`Let's make amazing ${recipe.name}`} averageRating={recipe.averageRating} image={recipe.image}/>
               </div>
             </Link>
           ))}
         </div>
       </div>
-    </div>
+  
   );
 }
