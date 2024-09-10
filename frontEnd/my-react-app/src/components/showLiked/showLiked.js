@@ -36,7 +36,7 @@ export default function ShowLiked() {
 
      
       <div className="favorites-container mt-4">
-        <div className="favorites-heading">YOU LIKED</div>
+        <h3 className="favorites-heading">YOU LIKED</h3>
         <div className="recipe-grid">
           {recipes.map((recipe, index) => (
             <Link key={index} className="nav-link" to={`/recipe/${recipe._id}`}>
