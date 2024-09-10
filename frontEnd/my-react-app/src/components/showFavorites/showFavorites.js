@@ -35,12 +35,12 @@ export default function ShowFavorites() {
   }, [favoriteRecipeIds]);
 
   return (
-    <div className="container mt-4 userdashboard" id="userdashboard">
-        <h2 className="text-center mb-4">YOUR FAVORITES</h2>
-        <div className="d-flex flex-wrap justify-content-around">
+    <div className="favorites-container mt-4">
+        <h2 className="favorites-heading">YOUR FAVORITES</h2>
+        <div className="recipe-grid">
           {recipes.map((recipe, index) => (
             <Link key={index} className="nav-link" to={`/recipe/${recipe._id}`}>
-              <div className="grid-item mb-3" style={{ width: "236px", height: "375px" ,borderRadius:'0'}}>
+              <div className="grid">
               <RecipeCard recipename={recipe.name} description={`Let's make amazing ${recipe.name}`} averageRating={recipe.averageRating} image={recipe.image}/>
               </div>
             </Link>
