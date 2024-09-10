@@ -36,7 +36,7 @@ export default function ShowFavorites() {
 
   return (
     <div className="favorites-container mt-4">
-        <h2 className="favorites-heading">YOUR FAVORITES</h2>
+        <h3 className="favorites-heading">YOUR FAVORITES</h3>
         <div className="recipe-grid">
           {recipes.map((recipe, index) => (
             <Link key={index} className="nav-link" to={`/recipe/${recipe._id}`}>
