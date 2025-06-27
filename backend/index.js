@@ -29,7 +29,6 @@ const mongoose =require('mongoose');
 mongoose.connect(uri).then(()=>{
     console.log("connection successful")
 }).catch(()=>{
-    console.log(uri)
-    // console.log("connection unsuccessful")
+    console.log("connection unsuccessful")
 })
 
