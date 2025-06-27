@@ -23,7 +23,7 @@ app.listen(port)
 
 
 
-const uri = "mongodb+srv://pasulashivachetanreddy:u3EEPcmciHDoofiK@cluster0.mxozr.mongodb.net/jpmc?retryWrites=true&w=majority&appName=Cluster0";
+const uri = process.env.MONGO_URI;
 //establishing mongodb connection
 const mongoose =require('mongoose');
 mongoose.connect(uri).then(()=>{
