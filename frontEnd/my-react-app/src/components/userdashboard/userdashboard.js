@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useHistory } from 'react-router-dom';
 import AppDownload from '../AppDownload/AppDownload';
 import Carousel from '../Carousel/carousel';
 import Footer from '../Footer/Footer';
@@ -9,6 +9,7 @@ import Usernavbar from '../usernavbar/usernavbar';
 export default function Userdashboard() {
   const [recommendedRecipes, setRecommendedRecipes] = useState([]);
   const [allRecipes, setAllRecipes] = useState([]);
+  const history = useHistory();
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('user'));
@@ -58,11 +59,11 @@ export default function Userdashboard() {
       <h2 className="text-center mb-4" style={{color:'darkcyan'}}>BASED ON YOUR PREFERENCES WE RECOMMEND YOU</h2>
       <div className="d-flex flex-wrap justify-content-around">
         {recommendedRecipes.map((recipe, index) => (
-          <Link key={index} className="nav-link" to={`/recipe/${recipe._id}`}>
-            <div className="grid-item mb-3" style={{ width: "236px", height: "375px",borderRadius:'0' }}>
+            // <Link key={index} className="nav-link" to={`/recipe/${recipe._id}`}>
+            <div key={index} className="grid-item mb-3" style={{ width: "236px", height: "375px",borderRadius:'0' }} onClick={()=>history.push({ pathname: `/recipe/${recipe._id}` })}>
               <RecipeCard recipename={recipe.name} description={`Let's make amazing ${recipe.name}`} averageRating={recipe.averageRating} image={recipe.image}/>
             </div>
-          </Link>
+          // </Link>
         ))}
       </div>
     </div>}
