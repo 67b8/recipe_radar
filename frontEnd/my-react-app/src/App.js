@@ -29,7 +29,7 @@ class App extends React.Component {
           <Route path='/' exact element={<Home />}></Route>
           <Route path='/login' exact element={<Login />}></Route>
           <Route element={<ProtectRecipe />}>
-          <Route path="/recipe/:id" element={<ShowRecipe />} />
+          <Route path="/recipe/:id/:action(copy)?" element={<ShowRecipe />} />
         </Route>
           <Route path='/register' exact element={<Register />}></Route>
           
